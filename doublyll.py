@@ -29,7 +29,10 @@ class DoublyLL:
 
     def init_prevs(self):
         # Implement here
-        pass
+        prev_node = self.head
+        while prev_node.next is not None:
+            prev_node.next.prev = prev_node
+            prev_node = prev_node.next
 
     def reverse_string(self):
         if self.head is None:
